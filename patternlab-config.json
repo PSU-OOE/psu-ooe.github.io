@@ -47,8 +47,10 @@
       "meta": "./source/_meta/",
       "data": "./source/_data",
       "css": "./source/css",
+      "js": "./source/js",
       "annotations": "./source/_annotations/",
       "styleguide": "./dist/",
+      "webfonts": "./source/webfonts",
       "patternlabFiles": {
         "general-header": "views/partials/general-header.mustache",
         "general-footer": "views/partials/general-footer.mustache",
@@ -63,7 +65,9 @@
       "data": "./public/styleguide/data/",
       "annotations": "./public/annotations/",
       "styleguide": "./public/styleguide",
-      "css": "./public/css/"
+      "css": "./public/css/",
+      "js": "./public/js",
+      "webfonts": "./public/webfonts"
     }
   },
   "patternExtension": "twig",
@@ -111,29 +115,36 @@
     "twig": {
       "namespaces": [
         {
+          "id": "global",
+          "recursive": false,
+          "paths": [
+            "./patterns/global"
+          ]
+        },
+        {
           "id": "atoms",
-          "recursive": true,
+          "recursive": false,
           "paths": [
             "./patterns/atoms"
           ]
         },
         {
           "id": "molecules",
-          "recursive": true,
+          "recursive": false,
           "paths": [
             "./patterns/molecules"
           ]
         },
         {
           "id": "organisms",
-          "recursive": true,
+          "recursive": false,
           "paths": [
             "./patterns/organisms"
           ]
         },
         {
           "id": "layouts",
-          "recursive": true,
+          "recursive": false,
           "paths": [
             "./patterns/layouts"
           ]

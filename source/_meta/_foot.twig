@@ -1,5 +1,19 @@
 
   <!--DO NOT REMOVE-->
   {{ patternLabFoot | raw }}
+  <script>
+    const cms = {
+      attach: (component, callback) => {
+        callback(document);
+        console.log('Attached javascript for ' + component);
+      },
+      detach: (component, callback) => {
+        console.log('Detach was called for ' + component + ', but Pattern Lab does not support detaching scripts.');
+      },
+    };
+  </script>
+  {% for script in get_component_scripts() %}
+    <script src="../../{{ script }}"></script>
+  {% endfor %}
   </body>
 </html>

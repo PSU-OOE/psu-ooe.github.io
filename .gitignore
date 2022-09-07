@@ -2,3 +2,6 @@ node_modules
 .idea
 public
 dependencyGraph.json
+/patterns/*/*
+!/patterns/*/*.md
+source/webfonts
