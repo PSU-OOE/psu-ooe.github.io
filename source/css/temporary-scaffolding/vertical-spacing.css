@@ -1,0 +1,54 @@
+/**
+ * @file
+ * Contains section vertical spacing specifications.
+ *
+ * Default:
+ *   Sections have 3rem margin-bottom which increases to 4rem at bp(m).
+ *   Sections have a row-gap of 3rem.
+ *
+ * Section modifiers:
+ *   vspace-small: Always have 3rem margin-bottom.
+ *   vspace-large: Starts at 5rem margin-bottom and increases to 6rem at bp(m).
+ *   vspace-none: Always have a margin-bottom of 0.
+ *
+ * Region modifiers:
+ *   region-vspace-small: Causes the section to have a row-gap of 2rem.
+ *
+ * Special cases:
+ *   Nested sections will always have a margin-bottom of 0.
+ */
+
+.layout:not(.layout .layout) {
+  margin-bottom: 3rem;
+}
+
+.layout__flex-gap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.layout--vspace-large:not(.layout .layout) {
+  margin-bottom: 5rem;
+}
+
+.layout--vspace-none:not(.layout .layout) {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 950px) {
+  .layout:not(.layout .layout) {
+    margin-bottom: 4rem;
+  }
+
+  .layout--vspace-small:not(.layout .layout) {
+    margin-bottom: 3rem;
+  }
+
+  .layout--vspace-large:not(.layout .layout) {
+    margin-bottom: 6rem;
+  }
+
+  .layout--vspace-none:not(.layout .layout) {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,41 @@
+/**
+ * @file
+ * Contains nesting-friendly multi-column layout specifications.
+ *
+ * Default:
+ *   Multi-column layouts have a 2% gap between columns.  This is accomplished
+ *   through a horizontal negative margin hack.  The flex-gap container has a
+ *   negative margin that pulls the layout inward on both sides by half of
+ *   the configured column gap.  Each layout region then adds an equivalent
+ *   positive margin to push the layout back out to its expected size.
+ *
+ * Special cases:
+ *   Nested multi-column layouts require a variable gap between columns.  This
+ *   variability is accomplished via cascading custom properties.
+ */
+.layout--multi-column {
+  --layout-default-column-gap: 2%;
+
+  --layout-column-gap-level-1: calc(var(--layout-default-column-gap) / 2);
+  --layout-column-gap: var(--layout-column-gap-level-1);
+}
+
+/* Handle nesting 2 levels deep. */
+.layout--multi-column .layout--multi-column {
+  --layout-column-gap-level-2: calc(var(--layout-column-gap-level-1) * (1 / (var(--region-weight, 1))));
+  --layout-column-gap: var(--layout-column-gap-level-2);
+}
+
+/* Push the left and right margins out by the appropriate amount. */
+.layout--multi-column > .layout__flex-gap {
+  margin-left: calc(-1 * (var(--layout-column-gap)));
+  margin-right: calc(-1 * (var(--layout-column-gap)));
+}
+
+/* Suck the left and right margins back in by an equivalent amount. */
+.layout--multi-column > .layout__flex-gap >  .layout__region {
+  --region-weight: 1;
+  margin-left: var(--layout-column-gap);
+  margin-right: var(--layout-column-gap);
+  flex: 1 1 calc((100% * (var(--region-weight))) - (2 * var(--layout-column-gap)));
+}

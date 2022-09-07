@@ -1,0 +1,33 @@
+/**
+ * @file
+ * Contains section width specifications.
+ */
+
+.layout {
+  max-width: 119rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.layout--narrow {
+  max-width: 95rem;
+}
+
+/** Full width is only available to top-level layouts. */
+.layout--full-width:not(.layout .layout) {
+  max-width: unset;
+  overflow: hidden;
+}
+
+/** Left and right padding is only applied to top-level, non-full-width layouts. */
+.layout:not(.layout--full-width):not(.layout .layout) {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media screen and (min-width: 550px) {
+  .layout:not(.layout--full-width):not(.layout .layout) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}

@@ -1,0 +1,26 @@
+/**
+ * @file
+ * Contains section component specifications.
+ */
+.layout .block {
+  margin-bottom: 3rem;
+}
+
+.layout .block--vspace-large {
+  margin-bottom: 5rem;
+}
+
+.layout .block:last-of-type {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 950px) {
+
+  .layout .block--vspace-large {
+    margin-bottom: 6rem;
+  }
+
+  .layout .block:last-of-type {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,17 @@
+/**
+ * @file
+ * Contains region vertical spacing specifications.
+ *
+ * Default:
+ *   Layout regions have a vertical gap of 3rem.
+ *
+ * Region modifiers:
+ *   region-vspace-small: Layout regions have a vertical gap of 2rem.
+ */
+.layout__flex-gap {
+  row-gap: 3rem;
+}
+
+.layout--region-vspace-small > .layout__flex-gap {
+  row-gap: 2rem;
+}

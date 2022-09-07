@@ -1,0 +1,140 @@
+/* @TODO: Delete when old Safari degraded support is finally dropped. */
+
+.no-flex-gap .layout > .layout__region {
+  margin-bottom: 3rem;
+  flex-basis: 100%;
+}
+
+.no-flex-gap .layout--region-vspace-small > .layout__region {
+  margin-bottom: 2rem;
+}
+
+.no-flex-gap .layout.layout--onecol > .layout__region {
+  margin-bottom: 0;
+}
+
+.no-flex-gap .layout--twocol > .layout__region--first,
+.no-flex-gap .layout--threecol > .layout__region--first,
+.no-flex-gap .layout--threecol > .layout__region--second,
+.no-flex-gap .layout--fourcol > .layout__region--first,
+.no-flex-gap .layout--fourcol > .layout__region--second,
+.no-flex-gap .layout--fourcol > .layout__region--third {
+  margin-bottom: 3rem;
+}
+
+.no-flex-gap .layout--twocol.layout--region-vspace-small > .layout__region--first,
+.no-flex-gap .layout--threecol.layout--region-vspace-small > .layout__region--first,
+.no-flex-gap .layout--threecol.layout--region-vspace-small > .layout__region--second,
+.no-flex-gap .layout--fourcol.layout--region-vspace-small > .layout__region--first,
+.no-flex-gap .layout--fourcol.layout--region-vspace-small > .layout__region--second,
+.no-flex-gap .layout--fourcol.layout--region-vspace-small > .layout__region--third {
+  margin-bottom: 2rem;
+}
+
+.no-flex-gap .layout--twocol >.layout__region--second,
+.no-flex-gap .layout--threecol >.layout__region--third,
+.no-flex-gap .layout--fourcol >.layout__region--fourth {
+  margin-bottom: 0;
+}
+
+@media all and (min-width: 550px) {
+  .no-flex-gap .layout--twocol > .layout__region {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 0;
+    flex-basis: 48%;
+  }
+
+  .no-flex-gap .layout--twocol--33-67 > .layout__region--first,
+  .no-flex-gap .layout--twocol--67-33 > .layout__region--second {
+    flex-basis: 31%;
+  }
+
+  .no-flex-gap .layout--twocol--33-67 > .layout__region--second,
+  .no-flex-gap .layout--twocol--67-33 > .layout__region--first {
+    flex-basis: 65%;
+  }
+
+  .no-flex-gap .layout--twocol--25-75 > .layout__region--first,
+  .no-flex-gap .layout--twocol--75-25 > .layout__region--second {
+    flex-basis: 23%;
+  }
+
+  .no-flex-gap .layout--twocol--25-75 > .layout__region--second,
+  .no-flex-gap .layout--twocol--75-25 > .layout__region--first {
+    flex-basis: 73%;
+  }
+
+
+  .no-flex-gap .layout--fourcol > .layout__region {
+    margin-left: 1%;
+    margin-right: 1%;
+    flex-basis: 48%;
+  }
+
+  .no-flex-gap .layout--fourcol > .layout__region:nth-of-type(3),
+  .no-flex-gap .layout--fourcol > .layout__region:nth-of-type(4) {
+    margin-bottom: 0;
+  }
+}
+
+@media all and (min-width: 800px) {
+  .no-flex-gap .layout--threecol > .layout__region {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 0;
+  }
+
+  .no-flex-gap .layout--threecol--33-33-33 > .layout__region {
+    flex-basis: 31%;
+  }
+
+  .no-flex-gap .layout--threecol--25-50-25 > .layout__region--first,
+  .no-flex-gap .layout--threecol--25-50-25 > .layout__region--third,
+  .no-flex-gap .layout--threecol--25-25-50 > .layout__region--first,
+  .no-flex-gap .layout--threecol--25-25-50 > .layout__region--second,
+  .no-flex-gap .layout--threecol--50-25-25 > .layout__region--second,
+  .no-flex-gap .layout--threecol--50-25-25 > .layout__region--third {
+    flex-basis: 23%;
+  }
+
+  .no-flex-gap .layout--threecol--25-50-25 > .layout__region--second,
+  .no-flex-gap .layout--threecol--25-25-50 > .layout__region--third,
+  .no-flex-gap .layout--threecol--50-25-25 > .layout__region--first {
+    flex-basis: 48%;
+  }
+}
+
+@media all and (min-width: 950px) {
+  .no-flex-gap .layout--fourcol > .layout__region {
+    margin-bottom: 0;
+    flex-basis: 23%;
+  }
+}
+
+.no-flex-gap .layout--at-a-glance > .layout__region,
+.no-flex-gap .layout--tabs > .layout__region--tabs {
+  margin-bottom: 0;
+}
+
+.no-flex-gap .layout--at-a-glance:not(.layout--at-a-glance--accordion) > .layout__region > .block {
+  margin-bottom: 3rem;
+}
+
+@media all and (min-width: 550px) {
+  .no-flex-gap .layout--at-a-glance--accordion[data-child-count="2"] > .layout__region > .block {
+    margin-bottom: 3rem;
+  }
+}
+
+@media all and (min-width: 800px) {
+  .no-flex-gap .layout--at-a-glance--accordion[data-child-count="3"] > .layout__region > .block {
+    margin-bottom: 3rem;
+  }
+}
+
+@media all and (min-width: 950px) {
+  .no-flex-gap .layout--at-a-glance--accordion[data-child-count="4"] > .layout__region > .block {
+    margin-bottom: 3rem;
+  }
+}
