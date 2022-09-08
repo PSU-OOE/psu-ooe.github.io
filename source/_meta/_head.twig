@@ -14,5 +14,7 @@
     {% for stylesheet in get_component_stylesheets() %}
       <link rel="stylesheet" href="../../{{ stylesheet }}" />
     {% endfor %}
+
+    <script>const cms = { attach: (component, callback) => callback(document) };</script>
   </head>
   <body class="{{ bodyClass }}">
