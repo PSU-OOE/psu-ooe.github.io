@@ -134,20 +134,6 @@
           "paths": [
             "./components/molecules"
           ]
-        },
-        {
-          "id": "organisms",
-          "recursive": false,
-          "paths": [
-            "./components/organisms"
-          ]
-        },
-        {
-          "id": "layouts",
-          "recursive": false,
-          "paths": [
-            "./components/layouts"
-          ]
         }
       ],
       "alterTwigEnv": [
