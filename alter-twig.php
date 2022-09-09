@@ -6,18 +6,22 @@ use Twig\TwigFunction;
 function addCustomExtension(Environment $env) {
     $env->addFunction(new TwigFunction('get_component_stylesheets', function () {
         $styles = [];
-        foreach (glob('patterns/**/*/dist/styles.css') as $component) {
-            $styles[] = str_replace('patterns', 'css', $component);
+        foreach (glob('components/**/*/dist/styles.css') as $component) {
+            $styles[] = str_replace('components', 'css', $component);
         }
         return $styles;
     }));
 
   $env->addFunction(new TwigFunction('get_component_scripts', function () {
     $scripts = [];
-    foreach (glob('patterns/**/*/dist/scripts.js') as $component) {
-      $scripts[] = str_replace('patterns', 'js', $component);
+    foreach (glob('components/**/*/dist/scripts.js') as $component) {
+      $scripts[] = str_replace('components', 'js', $component);
     }
     return $scripts;
+  }));
+
+  $env->addFunction(new TwigFunction('get_sprites', function() {
+      return file_get_contents('components/atoms/sprite/dist/sprites.svg');
   }));
 }
 
