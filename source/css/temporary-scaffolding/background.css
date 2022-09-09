@@ -56,3 +56,9 @@
 .layout--bg-light-grey .cta-block--expand {
   --cta-block-expand-background-color: var(--cta-block-expand-background-color-light);
 }
+
+/* Background images starter kit */
+.layout--bg-extended.layout--bg-shield-bg,
+.layout--bg.layout--bg-shield-bg:not(.layout--bg-extended) > .layout__content {
+  background: red !important;
+}
