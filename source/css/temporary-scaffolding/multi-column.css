@@ -27,13 +27,13 @@
 }
 
 /* Push the left and right margins out by the appropriate amount. */
-.layout--multi-column > .layout__flex-gap {
+.layout--multi-column > .layout__content > .layout__flex-gap {
   margin-left: calc(-1 * (var(--layout-column-gap)));
   margin-right: calc(-1 * (var(--layout-column-gap)));
 }
 
 /* Suck the left and right margins back in by an equivalent amount. */
-.layout--multi-column > .layout__flex-gap >  .layout__region {
+.layout--multi-column > .layout__content > .layout__flex-gap >  .layout__region {
   --region-weight: 1;
   margin-left: var(--layout-column-gap);
   margin-right: var(--layout-column-gap);

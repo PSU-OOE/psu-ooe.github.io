@@ -3,13 +3,13 @@
  * Contains section width specifications.
  */
 
-.layout {
+.layout > .layout__content {
   max-width: 119rem;
   margin-left: auto;
   margin-right: auto;
 }
 
-.layout--narrow {
+.layout--narrow > .layout__content {
   max-width: 95rem;
 }
 
@@ -20,13 +20,13 @@
 }
 
 /** Left and right padding is only applied to top-level, non-full-width layouts. */
-.layout:not(.layout--full-width):not(.layout .layout) {
+.layout:not(.layout--full-width):not(.layout .layout) > .layout__content {
   padding-left: 2rem;
   padding-right: 2rem;
 }
 
 @media screen and (min-width: 550px) {
-  .layout:not(.layout--full-width):not(.layout .layout) {
+  .layout:not(.layout--full-width):not(.layout .layout) > .layout__content {
     padding-left: 4rem;
     padding-right: 4rem;
   }

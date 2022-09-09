@@ -12,6 +12,6 @@
   row-gap: 3rem;
 }
 
-.layout--region-vspace-small > .layout__flex-gap {
+.layout--region-vspace-small > .layout__content > .layout__flex-gap {
   row-gap: 2rem;
 }

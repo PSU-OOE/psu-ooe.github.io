@@ -3,88 +3,52 @@
  * Contains layout background specifications.
  */
 
-/** Backgrounds are only available on top-level layouts. */
-.layout--bg:not(.layout .layout) {
-  position: relative;
-  z-index: 0;
-}
-
-.layout--bg:not(.layout .layout)::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-/* Extended background */
-.layout--bg-extended:not(.layout .layout)::before {
-  left: -100vw;
-  right: -100vw;
-}
-
 /* Default top/bottom padding */
-.layout--bg:not(.layout .layout) {
+.layout--bg-extended,
+.layout--bg:not(.layout--bg-extended) > .layout__content
+{
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
 
 @media screen and (min-width: 950px) {
-  .layout--bg:not(.layout .layout) {
+  .layout--bg-extended,
+  .layout--bg:not(.layout--bg-extended) > .layout__content {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
 }
 
 /* Small top/bottom padding */
-.layout--bg-padding-small:not(.layout .layout) {
+.layout--bg-padding-small.layout--bg-extended,
+.layout--bg-padding-small:not(.layout--bg-extended) > .layout__content {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
 /* Large top/bottom padding */
-.layout--bg-padding-large:not(.layout .layout) {
+.layout--bg-padding-large.layout--bg-extended,
+.layout--bg-padding-large:not(.layout--bg-extended) > .layout__content {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
 @media screen and (min-width: 950px) {
-  .layout--bg-padding-large:not(.layout .layout) {
+  .layout--bg-padding-large.layout--bg-extended,
+  .layout--bg-padding-large:not(.layout--bg-extended) > .layout__content {
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
 }
 
-/* Make sure that full-width layouts with backgrounds specify some padding */
-.layout--full-width.layout--bg:not(.layout .layout) {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-@media screen and (min-width: 550px) {
-  .layout--full-width.layout--bg:not(.layout .layout) {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-
 /* Light grey background color */
-.layout--bg-light-grey:not(.layout .layout)::before {
+.layout--bg-light-grey.layout--bg-extended,
+.layout--bg-light-grey:not(.layout--bg-extended) > .layout__content {
   background-color: #f2f3f9;
 }
 
-.layout--bg-shield-bg::before {
-  background-color: #ebecf4;
-  background-image: url("../../images/community-shield.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 115rem;
-}
-
 /* "Automatic" fixes based on background color */
-.layout--bg-light-grey.layout--at-a-glance > .layout__flex-gap > .layout__region::after {
+.layout--bg-light-grey.layout--at-a-glance > .layout__content > .layout__flex-gap > .layout__region::after {
   background-color: #f2f3f9;
 }
 
