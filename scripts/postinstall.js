@@ -8,11 +8,11 @@ components.forEach(component => {
   const namespace = manifest.ooe.namespace;
   fse.copy(
       path.join('node_modules', '@psu-ooe', component),
-      path.join('patterns', namespace, component),
+      path.join('components', namespace, component),
       { recursive: true, overwrite: true }
   ).then(() => {
     fse.copySync(
-        path.join('patterns', 'global', 'webfonts', 'webfonts'),
+        path.join('components', 'global', 'webfonts', 'webfonts'),
         path.join('source', 'webfonts'),
         { recursive: true, overwrite: true }
     );
@@ -21,7 +21,7 @@ components.forEach(component => {
     if (!fse.existsSync(source_dir)) {
       fse.mkdirSync(source_dir);
     }
-    const script = path.join('patterns', namespace, component, 'dist', 'scripts.js');
+    const script = path.join('components', namespace, component, 'dist', 'scripts.js');
     if (fse.existsSync(script)) {
       fse.copySync(
           script,
@@ -34,7 +34,7 @@ components.forEach(component => {
     if (!fse.existsSync(source_dir)) {
       fse.mkdirSync(source_dir);
     }
-    const script = path.join('patterns', namespace, component, 'dist', 'styles.css');
+    const script = path.join('components', namespace, component, 'dist', 'styles.css');
     if (fse.existsSync(script)) {
       fse.copySync(
           script,

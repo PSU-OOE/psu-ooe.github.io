@@ -118,35 +118,35 @@
           "id": "global",
           "recursive": false,
           "paths": [
-            "./patterns/global"
+            "./components/global"
           ]
         },
         {
           "id": "atoms",
           "recursive": false,
           "paths": [
-            "./patterns/atoms"
+            "./components/atoms"
           ]
         },
         {
           "id": "molecules",
           "recursive": false,
           "paths": [
-            "./patterns/molecules"
+            "./components/molecules"
           ]
         },
         {
           "id": "organisms",
           "recursive": false,
           "paths": [
-            "./patterns/organisms"
+            "./components/organisms"
           ]
         },
         {
           "id": "layouts",
           "recursive": false,
           "paths": [
-            "./patterns/layouts"
+            "./components/layouts"
           ]
         }
       ],
