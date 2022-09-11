@@ -48,9 +48,10 @@
       "data": "./source/_data",
       "css": "./source/css",
       "js": "./source/js",
+      "images": "./source/images",
       "annotations": "./source/_annotations/",
       "styleguide": "./dist/",
-      "webfonts": "./source/webfonts",
+      "fonts": "node_modules/@psu-ooe/webfonts/webfonts",
       "patternlabFiles": {
         "general-header": "views/partials/general-header.mustache",
         "general-footer": "views/partials/general-footer.mustache",
@@ -67,7 +68,8 @@
       "styleguide": "./public/styleguide",
       "css": "./public/css/",
       "js": "./public/js",
-      "webfonts": "./public/webfonts"
+      "images": "./public/images",
+      "fonts": "./public/fonts"
     }
   },
   "patternExtension": "twig",
@@ -118,21 +120,21 @@
           "id": "global",
           "recursive": false,
           "paths": [
-            "./components/global"
+            "node_modules/@psu-ooe"
           ]
         },
         {
           "id": "atoms",
           "recursive": false,
           "paths": [
-            "./components/atoms"
+            "node_modules/@psu-ooe"
           ]
         },
         {
           "id": "molecules",
           "recursive": false,
           "paths": [
-            "./components/molecules"
+            "node_modules/@psu-ooe"
           ]
         }
       ],
