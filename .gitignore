@@ -2,5 +2,3 @@ node_modules
 .idea
 public
 dependencyGraph.json
-/components
-source/webfonts

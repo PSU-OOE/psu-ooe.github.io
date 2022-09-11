@@ -42,15 +42,16 @@
   },
   "paths": {
     "source": {
-      "root": "./source/",
-      "patterns": "./patterns/",
-      "meta": "./source/_meta/",
-      "data": "./source/_data",
-      "css": "./source/css",
-      "js": "./source/js",
-      "annotations": "./source/_annotations/",
-      "styleguide": "./dist/",
-      "webfonts": "./source/webfonts",
+      "root": "node_modules/@psu-ooe/patternlab/source/",
+      "patterns": "node_modules/@psu-ooe/patternlab/source/patterns/",
+      "meta": "node_modules/@psu-ooe/patternlab/source/_meta/",
+      "data": "node_modules/@psu-ooe/patternlab/source/_data/",
+      "css": "node_modules/@psu-ooe/patternlab/source/css",
+      "js": "node_modules/@psu-ooe/patternlab/source/js",
+      "images": "node_modules/@psu-ooe/patternlab/source/images",
+      "fonts": "node_modules/@psu-ooe/webfonts/webfonts",
+      "annotations": "node_modules/@psu-ooe/patternlab/source/_annotations/",
+      "styleguide": "dist/",
       "patternlabFiles": {
         "general-header": "views/partials/general-header.mustache",
         "general-footer": "views/partials/general-footer.mustache",
@@ -60,14 +61,15 @@
       }
     },
     "public": {
-      "root": "./public/",
-      "patterns": "./public/patterns/",
-      "data": "./public/styleguide/data/",
-      "annotations": "./public/annotations/",
-      "styleguide": "./public/styleguide",
-      "css": "./public/css/",
-      "js": "./public/js",
-      "webfonts": "./public/webfonts"
+      "root": "public/",
+      "patterns": "public/patterns/",
+      "data": "public/styleguide/data/",
+      "annotations": "public/annotations/",
+      "styleguide": "public/styleguide",
+      "css": "public/css/",
+      "js": "public/js",
+      "images": "public/images",
+      "fonts": "public/fonts"
     }
   },
   "patternExtension": "twig",
@@ -118,21 +120,21 @@
           "id": "global",
           "recursive": false,
           "paths": [
-            "./components/global"
+            "node_modules/@psu-ooe"
           ]
         },
         {
           "id": "atoms",
           "recursive": false,
           "paths": [
-            "./components/atoms"
+            "node_modules/@psu-ooe"
           ]
         },
         {
           "id": "molecules",
           "recursive": false,
           "paths": [
-            "./components/molecules"
+            "node_modules/@psu-ooe"
           ]
         }
       ],

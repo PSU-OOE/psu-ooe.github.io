@@ -4,24 +4,24 @@ use Twig\Environment;
 use Twig\TwigFunction;
 
 function addCustomExtension(Environment $env) {
-    $env->addFunction(new TwigFunction('get_component_stylesheets', function () {
-        $styles = [];
-        foreach (glob('components/**/*/dist/styles.css') as $component) {
-            $styles[] = str_replace('components', 'css', $component);
+  $env->addFunction(new TwigFunction('get_component_stylesheets', function () {
+    $styles = '';
+    foreach (glob('node_modules/@psu-ooe/*/dist/styles.css') as $component) {
+      $styles .= file_get_contents($component);
+    }
+    return $styles;
+  }));
+
+    $env->addFunction(new TwigFunction('get_component_scripts', function () {
+        $scripts = '';
+        foreach (glob('node_modules/@psu-ooe/*/dist/scripts.js') as $component) {
+            $scripts .= file_get_contents($component);
         }
-        return $styles;
+        return $scripts;
     }));
 
-  $env->addFunction(new TwigFunction('get_component_scripts', function () {
-    $scripts = [];
-    foreach (glob('components/**/*/dist/scripts.js') as $component) {
-      $scripts[] = str_replace('components', 'js', $component);
-    }
-    return $scripts;
-  }));
-
-  $env->addFunction(new TwigFunction('get_sprites', function() {
-      return file_get_contents('components/atoms/sprite/dist/sprites.svg');
-  }));
+    $env->addFunction(new TwigFunction('get_sprites', function() {
+        return file_get_contents('node_modules/@psu-ooe/sprite/dist/sprites.svg');
+    }));
 }
 
