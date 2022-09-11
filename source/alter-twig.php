@@ -21,7 +21,7 @@ function addCustomExtension(Environment $env) {
   }));
 
   $env->addFunction(new TwigFunction('get_sprites', function() {
-      return file_get_contents('components/atoms/sprite/dist/sprites.svg');
+      return file_get_contents('node_modules/@psu-ooe/sprite/dist/sprites.svg');
   }));
 }
 

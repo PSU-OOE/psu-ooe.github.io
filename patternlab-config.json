@@ -43,7 +43,7 @@
   "paths": {
     "source": {
       "root": "./source/",
-      "patterns": "./patterns/",
+      "patterns": "./source/patterns/",
       "meta": "./source/_meta/",
       "data": "./source/_data",
       "css": "./source/css",
@@ -140,7 +140,7 @@
       ],
       "alterTwigEnv": [
         {
-          "file": "alter-twig.php",
+          "file": "source/alter-twig.php",
           "functions": [
             "addCustomExtension"
           ]

@@ -13,6 +13,6 @@
     "@psu-ooe/webfonts": "^1.0.0"
   },
   "scripts": {
-    "build": "patternlab build --config ./patternlab-config.json && mkdir -p public/images && cp source/images/* public/images/"
+    "build": "patternlab build"
   }
 }
