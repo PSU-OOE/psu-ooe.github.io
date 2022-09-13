@@ -136,6 +136,13 @@
           "paths": [
             "node_modules/@psu-ooe"
           ]
+        },
+        {
+          "id": "organisms",
+          "recursive": false,
+          "paths": [
+            "node_modules/@psu-ooe"
+          ]
         }
       ],
       "alterTwigEnv": [
