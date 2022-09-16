@@ -9,6 +9,7 @@
 {
   padding-top: 4rem;
   padding-bottom: 4rem;
+  position:relative;
 }
 
 @media screen and (min-width: 950px) {
@@ -58,7 +59,143 @@
 }
 
 /* Background images starter kit */
-.layout--bg-extended.layout--bg-shield-bg,
-.layout--bg.layout--bg-shield-bg:not(.layout--bg-extended) > .layout__content {
-  background: red !important;
+
+.layout--bg-extended.layout--bg-shield,
+.layout--bg.layout--bg-shield:not(.layout--bg-extended) > .layout__content,
+.layout--bg-extended.layout--bg-shield-left,
+.layout--bg.layout--bg-shield-left:not(.layout--bg-extended) > .layout__content {
+  background-color: #ebecf4;
+}
+
+@supports ( container-type: inline-size ){
+
+.layout--bg-extended.layout--bg-shield,
+.layout--bg.layout--bg-shield:not(.layout--bg-extended) > .layout__content,
+.layout--bg-extended.layout--bg-shield-left,
+.layout--bg.layout--bg-shield-left:not(.layout--bg-extended) > .layout__content {
+  background-color: none;
+  container-type: inline-size;
+}
+
+.layout--bg-extended.layout--bg-shield::before,
+.layout--bg.layout--bg-shield:not(.layout--bg-extended) > .layout__content::before,
+.layout--bg-extended.layout--bg-shield-left::before,
+.layout--bg.layout--bg-shield-left:not(.layout--bg-extended) > .layout__content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: #ebecf4;
+  background-image: url("../../images/community-shield.svg");
+  background-repeat: no-repeat;
+  background-position: right -58rem top -40rem;
+  background-size: 70rem;
+}
+.layout--bg-extended.layout--bg-shield-left::before,
+.layout--bg.layout--bg-shield-left:not(.layout--bg-extended) > .layout__content::before {
+  background-position: left -62rem top -42rem;
+  background-size: 70rem;
+}
+
+@container (min-width: 550px) {
+  .layout--bg-extended.layout--bg-shield::before,
+  .layout--bg.layout--bg-shield:not(.layout--bg-extended) > .layout__content::before {
+    background-position: right -75rem top -47rem;
+    background-size: 90rem;
+  }
+  .layout--bg-extended.layout--bg-shield-left::before,
+  .layout--bg.layout--bg-shield-left:not(.layout--bg-extended) > .layout__content::before {
+    background-position: left -78rem top -49rem;
+    background-size: 90rem;
+  }
+}
+
+@container (min-width: 800px) {
+  .layout--bg-extended.layout--bg-shield::before,
+  .layout--bg.layout--bg-shield:not(.layout--bg-extended) > .layout__content::before {
+    background-position: right -92rem top -63rem;
+    background-size: 110rem;
+  }
+  .layout--bg-extended.layout--bg-shield-left::before,
+  .layout--bg.layout--bg-shield-left:not(.layout--bg-extended) > .layout__content::before {
+    background-position: left -98rem top -63rem;
+    background-size: 110rem;
+  }
+}
+
+@container (min-width: 950px) {
+  .layout--bg-extended.layout--bg-shield::before,
+  .layout--bg.layout--bg-shield:not(.layout--bg-extended) > .layout__content::before {
+    background-position: right -110rem top -76rem;
+    background-size: 130rem;
+  }
+  .layout--bg-extended.layout--bg-shield-left::before,
+  .layout--bg.layout--bg-shield-left:not(.layout--bg-extended) > .layout__content::before {
+    background-position: left -112rem top -76rem;
+    background-size: 130rem;
+  }
+}
+
+@container (min-width: 1280px) {
+  .layout--bg-extended.layout--bg-shield.layout--narrow::before,
+  .layout--bg.layout--bg-shield.layout--narrow:not(.layout--bg-extended) > .layout__content::before {
+    background-position: right -98rem top -76rem;
+    background-size: 130rem;
+  }
+  .layout--bg-extended.layout--bg-shield-left.layout--narrow::before,
+  .layout--bg.layout--bg-shield-left.layout--narrow:not(.layout--bg-extended) > .layout__content::before {
+    background-position: left -98rem top -76rem;
+    background-size: 130rem;
+  }
+}
+
+@container (min-width: 1500px) {
+  .layout--bg-extended.layout--bg-shield::before,
+  .layout--bg.layout--bg-shield:not(.layout--bg-extended) > .layout__content::before {
+    background-position: right -95rem top -76rem;
+    background-size: 130rem;
+  }
+  .layout--bg-extended.layout--bg-shield.layout--narrow::before,
+  .layout--bg.layout--bg-shield.layout--narrow:not(.layout--bg-extended) > .layout__content::before {
+    background-position: right -87rem top -76rem;
+    background-size: 130rem;
+  }
+  .layout--bg-extended.layout--bg-shield-left::before,
+  .layout--bg.layout--bg-shield-left:not(.layout--bg-extended) > .layout__content::before {
+    background-position: left -95rem top -76rem;
+    background-size: 130rem;
+  }
+  .layout--bg-extended.layout--bg-shield-left.layout--narrow::before,
+  .layout--bg.layout--bg-shield-left.layout--narrow:not(.layout--bg-extended) > .layout__content::before {
+    background-position: left -87rem top -76rem;
+    background-size: 130rem;
+  }
+}
+
+@container (min-width: 1800px) {
+  .layout--bg-extended.layout--bg-shield::before,
+  .layout--bg.layout--bg-shield:not(.layout--bg-extended) > .layout__content::before {
+    background-position: right -83rem top -76rem;
+    background-size: 130rem;
+  }
+  .layout--bg-extended.layout--bg-shield.layout--narrow::before,
+  .layout--bg.layout--bg-shield.layout--narrow:not(.layout--bg-extended) > .layout__content::before {
+    background-position: right -65rem top -76rem;
+    background-size: 130rem;
+  }
+  .layout--bg-extended.layout--bg-shield-left::before,
+  .layout--bg.layout--bg-shield-left:not(.layout--bg-extended) > .layout__content::before {
+    background-position: left -83rem top -76rem;
+    background-size: 130rem;
+  }
+  .layout--bg-extended.layout--bg-shield-left.layout--narrow::before,
+  .layout--bg.layout--bg-shield-left.layout--narrow:not(.layout--bg-extended) > .layout__content::before {
+    background-position: left -70rem top -76rem;
+    background-size: 130rem;
+  }
+}
+
 }
