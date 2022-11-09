@@ -145,6 +145,13 @@
           "paths": [
             "node_modules/@psu-ooe"
           ]
+        },
+        {
+          "id": "blocks",
+          "recursive": false,
+          "paths": [
+            "node_modules/@psu-ooe"
+          ]
         }
       ],
       "alterTwigEnv": [
