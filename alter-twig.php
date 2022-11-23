@@ -1,6 +1,7 @@
 <?php
 
 use Twig\Environment;
+use Twig\TwigFilter;
 use Twig\TwigFunction;
 
 require_once('node_modules/@psu-ooe/smart-datetime/SmartDatetime.php');
