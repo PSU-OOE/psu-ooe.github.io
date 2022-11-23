@@ -8,6 +8,8 @@ require_once('node_modules/@psu-ooe/smart-datetime/SmartDatetime.php');
 
 function addCustomExtension(Environment $env) {
   $env->addExtension(new SmartDatetimeExtension);
+  $env->addFilter(new TwigFilter('clean_unique_id', function($id) { return $id . '-' . uniqid(); }));
+
   $env->addFunction(new TwigFunction('get_component_stylesheets', function () {
     $styles = '';
     foreach (glob('node_modules/@psu-ooe/*/dist/styles.css') as $component) {
