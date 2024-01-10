@@ -3,7 +3,7 @@
   "description": "A Pattern Lab binding to the OOE design system",
   "version": "1.0.0",
   "devDependencies": {
-    "@psu-ooe/patternlab": "^1.0.2"
+    "@psu-ooe/patternlab": "^2.0.0"
   },
   "scripts": {
     "build": "patternlab build"
