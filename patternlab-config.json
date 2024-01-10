@@ -69,7 +69,7 @@
       "css": "public/css/",
       "js": "public/js",
       "images": "public/images",
-      "fonts": "public/fonts",
+      "fonts": "public/fonts"
     }
   },
   "patternExtension": "twig",
