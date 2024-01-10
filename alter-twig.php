@@ -53,7 +53,7 @@ function addCustomExtension(Environment $env) {
       $styles = '';
       foreach (array_keys($manifests) as $manifest) {
         $component = str_replace('@psu-ooe/', '', $manifest);
-        $potential_css_file = "packages/$component/dist/styles.css";
+        $potential_css_file = "node_modules/@psu-ooe/$component/dist/styles.css";
         if (file_exists($potential_css_file)) {
           $file_content = file_get_contents($potential_css_file);
           // Strip out any UTF-8 BOM sequences before inlining.
