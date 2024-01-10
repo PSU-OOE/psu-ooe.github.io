@@ -117,35 +117,7 @@
     "twig": {
       "namespaces": [
         {
-          "id": "global",
-          "recursive": false,
-          "paths": [
-            "node_modules/@psu-ooe"
-          ]
-        },
-        {
-          "id": "atoms",
-          "recursive": false,
-          "paths": [
-            "node_modules/@psu-ooe"
-          ]
-        },
-        {
-          "id": "molecules",
-          "recursive": false,
-          "paths": [
-            "node_modules/@psu-ooe"
-          ]
-        },
-        {
-          "id": "organisms",
-          "recursive": false,
-          "paths": [
-            "node_modules/@psu-ooe"
-          ]
-        },
-        {
-          "id": "blocks",
+          "id": "psu-ooe",
           "recursive": false,
           "paths": [
             "node_modules/@psu-ooe"
