@@ -49,9 +49,8 @@
       "css": "node_modules/@psu-ooe/patternlab/source/css",
       "js": "node_modules/@psu-ooe/patternlab/source/js",
       "images": "node_modules/@psu-ooe/patternlab/source/images",
-      "fonts": "node_modules/@psu-ooe/webfonts/webfonts",
+      "fonts": "node_modules/@psu-ooe/patternlab/source/fonts",
       "annotations": "node_modules/@psu-ooe/patternlab/source/_annotations/",
-      "polyfill_focus_visible": "node_modules/focus-visible/dist/",
       "styleguide": "dist/",
       "patternlabFiles": {
         "general-header": "views/partials/general-header.mustache",
@@ -71,7 +70,6 @@
       "js": "public/js",
       "images": "public/images",
       "fonts": "public/fonts",
-      "polyfill_focus_visible": "public/vendor/polyfill_focus_visible"
     }
   },
   "patternExtension": "twig",
